@@ -1,5 +1,9 @@
 <h1>New Position</h1>
 
-<%= render 'form', position: @position %>
-
-<%= link_to 'Back', positions_path %>
+<%= form_with(model: @position) do |f| %>
+	<%= f.label :memberID %>
+	<%= f.select :memberID, @members.map { |member| [member.name, member.id] } %>
+	<%= f.label "Position Name" %>
+	<%= f.text_field :position_name %>
+	<%= f.submit %>
+<% end %>

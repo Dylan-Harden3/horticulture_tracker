@@ -13,6 +13,7 @@ class PositionsController < ApplicationController
   # GET /positions/new
   def new
     @position = Position.new
+    @members = Member.all
   end
 
   # GET /positions/1/edit

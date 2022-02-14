@@ -6,5 +6,12 @@ class CreateMembers < ActiveRecord::Migration[6.1]
 
       t.timestamps
     end
+
+    create_table :positions do |t|
+    	t.belongs_to :member
+    	t.integer :ID
+    	t.integer :memberID
+        t.string :position_name
+      	t.timestamps
   end
 end
