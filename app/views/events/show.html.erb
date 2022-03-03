@@ -1,39 +1,65 @@
-<p id="notice"><%= notice %></p>
+<section class="fade-bg">
 
-<p>
-  <strong>Event type:</strong>
-  <%= @event.event_type %>
-</p>
+  <nav class="admin-navbar">
 
-<p>
-  <strong>Start date:</strong>
-  <%= @event.start_date %>
-</p>
+    <h1 href="../events" class="admin-page-title">Events</h1>
 
-<p>
-  <strong>End date:</strong>
-  <%= @event.end_date %>
-</p>
+    <div class="nav-options">
+      <a href="../../members">Members</a>
+      <a href="../../points">Points</a>
+      <a href="../../leaderboard">Leaderboard</a>
+      <a href="../../plants">Plant Sale</a>
+      <a href="../../positions">Positions</a>
+      <a href="../../">Dashboard</a>
+    </div>
 
-<p>
-  <strong>Start time:</strong>
-  <%= @event.start_time %>
-</p>
+  </nav>
 
-<p>
-  <strong>End time:</strong>
-  <%= @event.end_time %>
-</p>
+  <div class="events-form-wrapper">
+    <div class="events-form-margin">
+      <h1 class="events-form-title">Event Details</h1>
 
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
+      <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Points:</strong>
-  <%= @event.points %>
-</p>
+      <p>
+        <strong>Event type:</strong>
+        <%= @event.event_type %>
+      </p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+      <p>
+        <strong>Start date:</strong>
+        <%= @event.start_date %>
+      </p>
+
+      <p>
+        <strong>End date:</strong>
+        <%= @event.end_date %>
+      </p>
+
+      <p>
+        <strong>Start time:</strong>
+        <%= @event.start_time %>
+      </p>
+
+      <p>
+        <strong>End time:</strong>
+        <%= @event.end_time %>
+      </p>
+
+      <p>
+        <strong>Description:</strong>
+        <%= @event.description %>
+      </p>
+
+      <p>
+        <strong>Points:</strong>
+        <%= @event.points %>
+      </p>
+      <div class="event-show-links">
+        <%= link_to 'Edit Event', edit_event_path(@event), class: "events-show-link" %>
+        <%= link_to 'Back to Events', events_path, class: "events-show-link"%>
+      </div>
+    </div>
+  </div>
+
+</section>

@@ -12,6 +12,7 @@
  .fade-bg {
      background-image: linear-gradient(to right, #218743, #02491A);
      min-height: 100vh;
+     height: 100%;
  }
 
  .dashboard-title {
@@ -190,7 +191,6 @@
     padding: 10px 15px;
     border-radius: 15px;
     background-color: #0072ff;
-    // background-image: linear-gradient(to right, #00c6ff 0%, #0072ff  51%, #00c6ff  100%);
 }
 
 .table-first-row{

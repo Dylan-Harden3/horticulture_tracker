@@ -2,6 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+// Event Show Styles
+.events-show-links {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    padding-bottom: 50px !important;
+}
+
+.events-show-link {
+    border: 1px solid #0072ff;
+    color: #0072ff;
+    text-decoration: none;
+}
+
 // Event Form Styles
 .events-form-wrapper {
     background-color: #fff;
@@ -13,13 +27,12 @@
 .events-form-margin {
     margin-left: 100px;
     margin-right: 100px;
+    padding-bottom: 50px;
 }
 
 .events-date-start-end, .events-time-start-end, .events-form-links {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    // justify-content: space-between;
-    // align-items: center;
     width: 90%;
     max-width: 100%;
 }
