@@ -2,6 +2,7 @@
 
 class MembersController < ApplicationController
   before_action :set_member, only: %i[show edit update destroy]
+  
 
   # GET /members or /members.json
   def index
@@ -72,6 +73,6 @@ class MembersController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def member_params
-    params.require(:member).permit(:name, :events_attended)
+    params.require(:member).permit(:name, :events_attended, :photo, :avatar)
   end
 end

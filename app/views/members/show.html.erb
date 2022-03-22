@@ -5,5 +5,13 @@
   <%= @member.name %>
 </p>
 
+<p>
+  <% if @member.avatar.attached? %>
+    <strong>Avatar:</strong>
+    <%= image_tag @member.avatar %>
+  <% end %>
+</p>
+
+
 <%= link_to 'Edit', edit_member_path(@member) %> |
 <%= link_to 'Back', members_path %>
