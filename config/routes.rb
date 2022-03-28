@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   # resources :admins
 
   root 'website#index'
+  get 'plantsale', to: 'website#plantsale'
   devise_for :admins, controllers: { omniauth_callbacks: 'admins/omniauth_callbacks' }
   devise_scope :admin do
     get 'admins/sign_in', to: 'admins/sessions#new', as: :new_admin_session
