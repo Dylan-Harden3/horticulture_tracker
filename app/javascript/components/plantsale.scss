@@ -1,0 +1,15 @@
+// Styles for the plant sale page for members
+.bg-plantsale {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-height: 100%;
+    background-image: linear-gradient(315deg, #00F260, #0575E6);
+}
+
+.plantsale-wrapper {
+    background-color: #fff;
+    width: 90%;
+    height: 100%;
+}
