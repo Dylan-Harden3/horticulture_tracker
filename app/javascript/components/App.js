@@ -66,7 +66,6 @@ const EventCalendar = () => {
 
       })
       setEvents(tempEvents);
-      console.log(tempEvents);
    }
 
 
