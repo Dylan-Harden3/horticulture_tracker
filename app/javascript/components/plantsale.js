@@ -3,52 +3,43 @@ import './styles.scss'
 
 const PlantSale = () => {
 
-    const[plants, setPlants] = useState();
+    const[plants, setPlants] = useState([]);
+    
+    const getPlants = async () => {
 
-    function changePlantType(type) {
-        let tempPlants = [];
-        plants.forEach(plant => {
-            if(plant.category == type) {
-                tempPlants.push(plant);
-            }
-        })
-        setPlants(tempPlants);
-    }
-
-    function updatePlants(data) {
-        let tempPlants = [];
-        data.forEach(plant => {
-            let p  = {
-                name : plant.name,
-                price : plant.price,
-                description : plant.description,
-                quantity : plant.quantity,
-                category : plant.category
-            };
-            console.log(p)
-            tempPlants.push(p);
-        })
-        setPlants(tempPlants);
+        // Get the data response from API call
+        try {
+           const response = await fetch('/api/v1/plants');
+           const data = await response.json();
+           return data
+        } catch(error) {    // Catch any errors 
+            console.error(error)
+            return null
+        }
     }
 
     useEffect(async () => {
-        const getPlants = async () => {
-           try {
-              const response = await fetch('/api/v1/plants');
-              const data = await response.json();
-              updatePlants(data);
-           }catch(error) { console.log(error); }
-        }
-        await getPlants();
-        console.log(plants);
+
+        const plants = await getPlants();   // Get the plants from plant API
+        setPlants(plants)                   // Update the plants state
+        
      }, []);
 
     return (
-        <div className='bg-plantsale'>
+         <div className='bg-plantsale'>
             <div className='plantsale-wrapper'>
-                {/* {plants.map((value) => {
-                    return <div className='plant-wrapper'><p>{value}</p></div>
-                })} */}
+                {
+                    plants && plants.map(plant => {
+                        return (
+                            <div className='plant-wrapper'>
+                                <p>{ plant.name }</p>
+                                <p>{ plant.price }</p>
+                                <p>{ plant.quantity }</p>
+                                <p>{ plant.description }</p>
+                            </div>
+                        )
+                    })
+                }
             </div>
         </div>
     )

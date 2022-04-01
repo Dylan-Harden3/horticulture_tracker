@@ -68,9 +68,7 @@ RSpec.describe('Creating a plant', type: :feature) do
     visit new_plant_path
     fill_in 'Name', with: 'Rose'
     fill_in 'Price', with: '12.99'
-    fill_in 'Description', with: 'Test description'
-    select 'Flowers', from: 'plant_category'
-    select 'Annual', from: 'plant_growth'
+    select 'Annuals', from: 'plant_category'
     fill_in 'Quantity', with: '5'
     click_on 'Create Plant'
     expect(page).to(have_content('Rose'))
