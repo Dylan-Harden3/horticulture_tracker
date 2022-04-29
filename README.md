@@ -41,9 +41,9 @@ An RSpec test suite is available and can be ran using:
 
 Run the following code in Powershell if using windows or the terminal using Linux/Mac
 
-  `cd your_github_here`
+  `cd horticulture_tracker`
 
-  `docker run --rm -it --volume "$(pwd):/rails_app" -e DATABASE_USER=test_app -e DATABASE_PASSWORD=test_password -p 3000:3000 Dylan-Harden3/horticulture_tracker:main`
+  `docker run --rm -it --volume "$(pwd):/rails_app" -e DATABASE_USER=test_app -e DATABASE_PASSWORD=test_password -p 3000:3000 dmartinez05/ruby_rails/postgresql:latest`
 
   `cd rails_app`
 
