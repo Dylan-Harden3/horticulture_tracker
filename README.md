@@ -59,6 +59,14 @@ The application can be seen using a browser and navigating to http://localhost:3
 ## Environmental Variables/Files ##
 
 The app requires a google cloud account, as well as cloudinary. The keys for this project are stored in Heroku under settings > config variables.
+The specific environment variables it uses are:
+For cloudinary:
+ - CLOUD_NAME
+ - CLOUD_API_KEY
+ - CLOUD_API_SECRET
+For Google OAUTH:
+ - GOOGLE_OAUTH_CLIENT_ID
+ - GOOGLE_OAUTH_CLIENT_SECRET
 
 Deployment
 
